@@ -1,0 +1,19 @@
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script type="text/babel">
+      const rootElement = document.getElementById('root')
+      const children ='Hello World , Good Morning'
+      const className = 'container'
+      const props = {children , className}
+      //in the below element create class name is overide as latest name will be consider as final one
+      const element = <div id ='app-root'{...props} className="non-container"/>
+    //   const element = <div {...props}/>
+    //   const element = <div className={className}>{children}</div>;
+    //   const element = <div className="container">Hello World</div>;
+    console.log(element);
+    ReactDOM.render(element , rootElement)
+</script>
+  </body>
